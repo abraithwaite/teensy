@@ -2,6 +2,7 @@
 CFLAGS = -Wall
 CC = gcc
 AS = nasm -f elf64
+GAS = as
 
 all: 
 	#Do stuff
@@ -34,3 +35,6 @@ tiny6: tiny6.asm
 	$(AS) $^
 	$(CC) $(CFLAGS) -s -nostdlib -o $@.out $@.o
 
+tiny7: tiny7.asm
+	$(AS) $^
+	$(CC) $(CFLAGS) -s -nostdlib -o $@.out $@.o

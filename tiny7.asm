@@ -1,3 +1,4 @@
+# No difference for x86_64?
 bits 64
 global _start
 section .text
