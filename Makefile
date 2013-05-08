@@ -38,3 +38,11 @@ tiny6: tiny6.asm
 tiny7: tiny7.asm
 	$(AS) $^
 	$(CC) $(CFLAGS) -s -nostdlib -o $@.out $@.o
+
+tiny8: tiny8.s
+	$(GAS) $^ -o $@.o
+	$(CC) $(CFLAGS) -s -nostdlib -o $@.out $@.o
+
+tiny9: tiny9.asm
+	nasm -f bin -o $@.out $^
+	chmod +x $@.out
