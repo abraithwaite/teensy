@@ -46,3 +46,11 @@ tiny8: tiny8.s
 tiny9: tiny9.asm
 	nasm -f bin -o $@.out $^
 	chmod +x $@.out
+
+tiny10: tiny10.asm
+	nasm -f bin -o $@.out $^
+	chmod +x $@.out
+
+tiny11: tiny11.asm
+	nasm -f bin -o $@.out $^
+	chmod +x $@.out
